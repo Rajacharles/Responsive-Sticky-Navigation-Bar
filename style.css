@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+}
+
+.section-main{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.section-main h1{
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  z-index: 999;
+  transition: 0.6s;
+}
+
+header.sticky{
+  background-color: #c50e1a;
+  padding: 15px 100px;
+}
+
+header .brand{
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a{
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 30px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+header .menu a:hover{
+  color: #000;
+  background: #fff;
+}
+
+header .btn{
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+}
+
+.section-two {
+  min-height: 100vh;
+  background: #222;
+  padding: 20px 100px;
+}
+
+.section-two h2{
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.section-two p {
+  font-size: 18px;
+  margin: 30px 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 1024px) {
+  header .btn{
+    display: block;
+  }
+
+  header .menu.active{
+    right: 0;
+  }
+
+  header .menu{
+    position: fixed;
+    background: #a81b24;
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition-property: right;
+    transition: 0.5s;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a{
+    display: block;
+    font-size: 16px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 580px) {
+  .section-main h1{
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
